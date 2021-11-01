@@ -1,0 +1,18 @@
+.caja { 
+	padding: 10px;
+    border-radius: 8px;
+}
+
+#contenedor {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  }
+  #principal {
+	width: 60%;
+	margin: 2%;
+  }
+  #sidebar {
+	width: 30%;
+	margin: 2%;
+  }
