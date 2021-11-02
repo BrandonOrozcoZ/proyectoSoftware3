@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poket Manager</title>
+  <title>Pocket Manager</title>
 
   <!-- BOOTSTRAP CDN-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -48,8 +48,8 @@
   <!--Navegation-->
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Pocket Manager</a>
+    <div class="container-xl">
+      <a class="navbar-brand" href="index.html">Pocket Manager</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,25 +57,33 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item logged-out" style="display: none;">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">SignIn</a>
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">¡Ingresa aquí!</a>
           </li>
           <li class="nav-item logged-out" style="display: none;">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">SignUp</a>
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">¡Únete gratis!</a>
+          </li>
+          <!--
+          <li class="nav-item logged-in" style="display: none;">
+            <a class="nav-link" href="Inventory/inventory.html" id="inventory">Inventario</a>
           </li>
           <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="Inventory/inventory.html" id="inventory">Inventory</a>
+            <a class="nav-link" href="#" id="orders">Ventas</a>
           </li>
           <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="orders">Orders</a>
+            <a class="nav-link" href="#" id="sales">Compras</a>
           </li>
           <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="sales">Sales</a>
+            <a class="nav-link" href="#" id="shopping">Finanzas</a>
           </li>
           <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="shopping">Shopping</a>
+            <a class="nav-link" href="#" id="shopping">Pedidos</a>
           </li>
           <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="logout">Logout</a>
+            <a class="nav-link" href="#" id="shopping">Mis datos</a>
+          </li>
+          -->
+          <li class="nav-item logged-in" style="display: none;">
+            <a class="nav-link" href="#" id="logout">Salir</a>
           </li>
         </ul>
       </div>
@@ -86,30 +94,30 @@
   <div class="modal fade" id="signUpModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content" style="border: 0.5px solid lightskyblue;">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">SignUp</h5>
+          <h5 class="modal-title" id="staticBackdropLabel" >¡Completa los campos para unirte!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form id="signup-form">
             <div class="form-group my-3">
-              <input type="text" id="signup-name" class="form-control" placeholder="Full Name" required>
+              <input type="text" id="signup-name" class="form-control" placeholder="Nombre completo" required>
             </div>
             <div class="form-group my-3">
-              <input type="text" id="signup-dni" class="form-control" placeholder="DNI" required>
+              <input type="text" id="signup-dni" class="form-control" placeholder="Cédula" required>
             </div>
             <div class="form-group my-3">
-              <input type="text" id="signup-email" class="form-control" placeholder="Email" required>
+              <input type="text" id="signup-email" class="form-control" placeholder="Correo" required>
             </div>
             <div class="form-group my-3">
-              <input type="text" id="signup-password" class="form-control" placeholder="Password" required>
+              <input type="text" id="signup-password" class="form-control" placeholder="Contraseña (mínimo 6 digitos)" required>
             </div>
             <div class="form-group my-3">
-              <input type="text" id="signup-business" class="form-control" placeholder="Business Name" required>
+              <input type="text" id="signup-business" class="form-control" placeholder="Nombre de tu negocio" required>
             </div>
             <div class="d-grid">
-              <button type="submit" class="btn btn-primary btn-block">Register</button>
+              <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
             </div>
           </form>
         </div>
@@ -121,21 +129,21 @@
   <div class="modal fade" id="loginModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content" style="border: 0.5px solid lightskyblue;">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">SignIn</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Iniciar Sesión</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form id="login-form">
             <div class="form-group my-3">
-              <input type="text" id="login-email" class="form-control" placeholder="Email" required>
+              <input type="text" id="login-email" class="form-control" placeholder="Correo" required>
             </div>
             <div class="form-group my-3">
-              <input type="text" id="login-password" class="form-control" placeholder="Password" required>
+              <input type="text" id="login-password" class="form-control" placeholder="Contraseña" required>
             </div>
             <div class="d-grid">
-              <button type="submit" class="btn btn-primary btn-block">Login</button>
+              <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
             </div>
           </form>
         </div>
@@ -146,14 +154,13 @@
   <!-- Body Page -->
 
   <main class="logged-out" style="margin-top: -0.7%;">
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="position-relative overflow-hidden p-3 p-md-6 m-md-3 text-center bg-light">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <h1 class="display-4 fw-normal">Pocket Manager</h1>
         <h2>Una nueva manera de gestionar tu <span class="typed"></span>.</h2>
-        <a class="btn btn-outline-secondary" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">¡Sign In!</a>
+        <a class="btn btn-outline-secondary" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">¡Ingresa aquí!</a>
         <p class="lead fw-normal my-1">Or</p>
-        <a class="btn btn-outline-secondary" href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">¡Sign Up
-          Free!</a>
+        <a class="btn btn-outline-secondary" href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">¡Únete gratis!</a>
 
       </div>
       <div class="product-device shadow-sm d-none d-md-block"></div>
@@ -167,7 +174,7 @@
           <p class="lead">Recuerden todo en inglés Mauro meta parla.</p>
         </div>
         <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-        <img src="images/caja-registradora.png" style="margin-top: -60%;">
+        <img src="images/caja-registradora.png" style="margin-top: -40%;">
       </div>
       <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
@@ -175,7 +182,7 @@
           <p class="lead">Mauro parla.</p>
         </div>
         <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-        <img src="images/caja.png" style="margin-top: -60%;">
+        <img src="images/caja.png" style="margin-top: -40%;">
       </div>
     </div>
 
@@ -186,7 +193,7 @@
           <p class="lead">And an even wittier subheading.</p>
         </div>
         <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-        <img src="images/control.png" style="margin-top: -60%;">
+        <img src="images/control.png" style="margin-top: -40%;">
       </div>
       <div class="bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
         <div class="my-3 py-3">
@@ -194,7 +201,7 @@
           <p class="lead">Nuestro equipo se ha esforzado muchísimo para traerte una herramienta muy fácil de usar.</p>
         </div>
         <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-        <img src="images/facil-de-usar.png" style="margin-top: -60%;">
+        <img src="images/facil-de-usar.png" style="margin-top: -40%;">
       </div>
     </div>
 
@@ -202,19 +209,19 @@
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <h1 class="display-4 fw-normal">Poket Manager</h1>
         <p class="lead fw-normal">La mejor alternativa para pequeñas empresas y emprendimientos.</p>
-        <a class="btn btn-outline-secondary" href="#" data-bs-target="#signUpModal">¡Registrate Gratis!</a>
+        <a class="btn btn-outline-secondary" href="#" data-bs-target="#signUpModal">¡Únete Gratis!</a>
       </div>
-      <div class="figura-rara" style="margin-top: -20%;"></div>
+      <div class="figura-rara" style="margin-top: -10%;"></div>
     </div>
 
     </div>
   </main>
 
-  <h1 class="logged-in text-center" style="margin-top: 1%;">¿Que vamos a hacer hoy?</h1>
+  <h1 class="logged-in text-center" style="margin-top: 1%;">¿Qué vamos a hacer hoy?</h1>
 
   <main class="logged-in bg-light" style="margin: 2%; border-radius: 10px;">
     <div class="row">
-      <button type="button" class="col card align-items-center btn-outline-success"
+      <button type="button" onclick="window.open('Inventory/inventory.html', '_self')" class="col card align-items-center btn-outline-success"
         style="margin: 0.5%; border-radius: 40px;">
         <img src="images/inventario.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
         <h5>Inventario</h5>
@@ -239,7 +246,7 @@
       <button type="button" class="col card align-items-center btn-outline-secondary"
         style="margin: 0.5%;border-radius: 40px;">
         <img src="images/envios.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
-        <h5>Envios</h5>
+        <h5>Pedidos</h5>
       </button>
       <button type="button" class="col card align-items-center btn-outline-danger"
         style="margin: 0.5%; border-radius: 40px;">
@@ -252,7 +259,7 @@
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <p class="col-md-4 mb-0 text-muted" style="margin-left: 1%;">Proyecto realizado como requisito para la asignatura de
-      ingenieria de software 3, Universidad del Quindio</p>
+      ingenieria de software 3, Universidad del Quindío</p>
 
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
@@ -293,7 +300,7 @@
       appId: "1:523730943900:web:f09515eb31afedce761259"
     });
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
+    const app = firebaseApp;
 
     const db = firebaseApp.firestore();
     const auth = firebaseApp.auth();

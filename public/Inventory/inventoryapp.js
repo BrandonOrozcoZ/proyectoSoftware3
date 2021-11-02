@@ -27,19 +27,29 @@ const loginCheck = async (user) => {
                 const querySnapshot2 = await getProducts();
                 
                 querySnapshot2.docs.forEach((product) => {
+                    console.log(product.id)
 
                     if(user.dni == product.data().dni){
                         
-                        userName.innerHTML = `<h1>${user.businessName} Inventory</h1>`;
+                        userName.innerHTML = `<h1>Inventario ${user.businessName}</h1>`;
                         productList.innerHTML += ` 
-                            <div class="card my-4 mx-2" style="width: 18rem;">
+                            <div class="card my-4 mx-2" style="width: 18rem; border-radius: 15px; border: 0.5px solid lightskyblue;">
                                 <div class="card-body">
                                     <h5 class="card-title">${product.data().name}</h5>
-                                    <p class="card-text">${product.data().amount} remaining</p>
-                                    <a href="product.html" class="btn btn-primary">Product view</a>
+                                    <p class="card-text">${product.data().amount} restantes!</p>
+                                    <a href="product.html" class="btn btn-primary btn-view" data-id="${product.id}">Ver producto</a>
+                                    <a href="#" class="btn btn-danger btn-delete" data-id="${product.id}">Eliminar</a>
                                 </div>
                             </div>
                             `;
+
+                        const btnsDelete = document.querySelectorAll('.btn-delete');
+                        btnsDelete.forEach(btn => {
+                            btn.addEventListener('click', async (e) => {
+                                await deleteProduct(e.target.dataset.id)
+                                location.reload();
+                            })
+                        })
                         
                             
                     }
@@ -51,6 +61,8 @@ const loginCheck = async (user) => {
         });
     } 
 }
+
+const deleteProduct = id => db2.collection('products').doc(id).delete();
 
 // Create Product
 const productForm = document.querySelector('#create-product-form');
@@ -79,18 +91,6 @@ productForm.addEventListener('submit', (e) => {
 
     productModal.hide();
 
-
-})
-
-// Logout
-const logout = document.querySelector('#logout');
-
-logout.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    auth.signOut().then(() =>{
-        console.log('sign out')
-    })
 
 })
 

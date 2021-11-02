@@ -44,8 +44,6 @@ signupForm.addEventListener('submit', (e) => {
 
             signupModal.hide();
 
-
-
         })
 
 
@@ -107,7 +105,8 @@ auth.onAuthStateChanged(user => {
 })
 
 
-// cosas de diseño
+// Diseño
+
 const typed = new Typed('.typed', {
     strings: [
         '<i id="tipo" style="font-weight: bold; color: #c99806; font-style: normal;">Tienda</i>',
@@ -123,7 +122,7 @@ const typed = new Typed('.typed', {
     fadeOut: false,
     fadeOutClass: 'typed-fade-out',
     fadeOutDelay: 500,
-    loop: false,
+    loop: true,
     loopCount: Infinity,
     showCursor: true,
     cursorChar: '|',
