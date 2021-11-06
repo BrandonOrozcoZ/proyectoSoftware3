@@ -1,18 +1,22 @@
 .caja { 
 	padding: 10px;
     border-radius: 8px;
+	background: white;
 }
 
 #contenedor {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	background: white;
   }
   #principal {
 	width: 60%;
 	margin: 2%;
+	background: white;
   }
   #sidebar {
 	width: 30%;
 	margin: 2%;
+	background-color: white;
   }

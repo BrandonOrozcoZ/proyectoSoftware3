@@ -9,6 +9,7 @@ const productPrice = document.querySelector('#create-price');
 
 // User
 const productList = document.querySelector('.products');
+const productView = document.querySelector('.productView')
 const userName = document.querySelector('.user');
 
 const loginCheck = async (user) => {
@@ -37,7 +38,7 @@ const loginCheck = async (user) => {
                                 <div class="card-body">
                                     <h5 class="card-title">${product.data().name}</h5>
                                     <p class="card-text">${product.data().amount} restantes!</p>
-                                    <a href="product.html" class="btn btn-primary btn-view" data-id="${product.id}">Ver producto</a>
+                                    <a href="#" class="btn btn-primary btn-view" data-id="${product.id}">Ver producto</a>
                                     <a href="#" class="btn btn-danger btn-delete" data-id="${product.id}">Eliminar</a>
                                 </div>
                             </div>
@@ -48,6 +49,14 @@ const loginCheck = async (user) => {
                             btn.addEventListener('click', async (e) => {
                                 await deleteProduct(e.target.dataset.id)
                                 location.reload();
+                            })
+                        })
+
+                        const btnsView = document.querySelectorAll('.btn-view');
+                        btnsView.forEach(btn2 => {
+                            btn2.addEventListener('click', async (e) => {
+                                await viewProduct (e.target.dataset.id);
+                                
                             })
                         })
                         
@@ -63,6 +72,57 @@ const loginCheck = async (user) => {
 }
 
 const deleteProduct = id => db2.collection('products').doc(id).delete();
+
+const viewProduct = async(id) => {
+
+    const querySnapshot3 = await getProducts();
+
+    querySnapshot3.docs.forEach((product2) => {
+
+        if(product2.id == id){
+            
+            productView.innerHTML = `<div id="principal" class="caja my-2" style="background: white; background-color: white;">
+                <h1>Datos del producto</h1>
+          <label for="productName" class="form-label">Nombre del producto:</label>
+          <input type="text" class="form-control" id="productName" placeholder="${product2.data().name}">
+          <label for="description" class="form-label">Descipción:</label>
+          <textarea class="form-control" id="description" rows="3"
+              placeholder="${product2.data().description}"></textarea>
+          <div id="contenedor2" style="background-color: white;">
+              <div id="col1" style="background-color: white; width: 48%;">
+                  <label for="precio" class="form-label">Precio:</label>
+                  <input type="number" class="form-control" id="precio" placeholder="${product2.data().price}">
+              </div>
+              <div id="col2" style="background-color: white; width: 48%;">
+                  <label for="cantidad" class="form-label">Cantidad:</label>
+                  <input type="number" class="form-control" id="cantidad" placeholder="${product2.data().amount}">
+              </div>
+          </div>
+
+          <label for="imagenes" class="form-label">Agrega una imagen de tu producto. (opcional)</label>
+          <input class="form-control" type="file" id="imagenes">
+
+          <div id="contenedor" style="background-color: white; margin-top: 2%; margin-left: 14%;">
+              <button type="button" class="btn btn-success" style="width: 40%;">Guardar</button>
+              <button type="button" class="btn btn-danger" style="width: 40%; margin-left: 4%;">Descartar</button>
+          </div>
+          </div>
+            <div id="sidebar" class="caja" style="background: white; background-color: white;">
+            <div style="background: white; background-color: white; margin: 0% 17%;">
+            <img src="/images/imagend.png">
+            <h4 style="text-align: center;">${product2.data().name}</h4>
+            <h6 style="text-align: center;">$${product2.data().price}</h6>
+            <p style="text-align: center;">${product2.data().description}</p>
+            <p style="text-align: center;">Disponibles: ${product2.data().amount}</p>
+          </div>
+            </div>
+            `
+          ;
+                
+        }
+
+    });
+} 
 
 // Create Product
 const productForm = document.querySelector('#create-product-form');
