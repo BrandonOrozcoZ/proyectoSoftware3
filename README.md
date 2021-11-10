@@ -2,7 +2,7 @@
 Proyecto final de ingeniería de software 3
 
 ## Integrantes
-* Brando Orozco Zuluaga http://www.github.com/BrandonOrozcoZ
+* Brandon Orozco Zuluaga http://www.github.com/BrandonOrozcoZ
 
 ## Propuesta de proyecto
 Uno de las grandes limitantes para los emprendedores son los sistemas de gestión y como estos son muy costosos y complejos de manejar. Gran parte de la población apenas se está adaptando a la tecnología, las computadoras y este nuevo mundo con miles de funciones y herramientas que se vuelven abrumadoras por su complejidad que en la mayoría de los casos es desproporcional a lo que los usuarios requieren, por esto se plantea la necesidad de un sistema de gestión que permita a un emprendedor con poco conocimiento sobre la tecnología y poco presupuesto, una herramienta idónea, intuitiva y atractiva que le permita gestionar su organización.
