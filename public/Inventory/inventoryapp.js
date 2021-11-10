@@ -103,8 +103,6 @@ const viewProduct = async(id) => {
           <input class="form-control" type="file" id="imagenes">
 
           <div id="contenedor" style="background-color: white; margin-top: 2%; margin-left: 14%;">
-              <button type="button" class="btn btn-success" style="width: 40%;">Guardar</button>
-              <button type="button" class="btn btn-danger" style="width: 40%; margin-left: 4%;">Descartar</button>
           </div>
           </div>
             <div id="sidebar" class="caja" style="background: white; background-color: white;">
