@@ -113,7 +113,7 @@ const typed = new Typed('.typed', {
         '<i id="tipo" style="font-weight: bold; color: #c99806; font-style: normal;">Fábrica</i>',
         '<i id="tipo" style="font-weight: bold; color: #c99806; font-style: normal;">Negocio</i>',
         '<i id="tipo" style="font-weight: bold; color: #c99806; font-style: normal;">Emprendimiento</i>',
-        '<i id="tipo" style="font-weight: bold; color: #c99806; font-style: normal;">Prueba</i>'
+        '<i id="tipo" style="font-weight: bold; color: #c99806; font-style: normal;">Que belleza ome</i>'
     ],
     typeSpeed: 75,
     startDelay: 100,
