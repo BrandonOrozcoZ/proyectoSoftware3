@@ -32,7 +32,7 @@ const loginCheck = async (user) => {
 
                     if(user.dni == product.data().dni){
                         
-                        userName.innerHTML = `<h1>Inventario ${user.businessName}</h1>`;
+                        userName.innerHTML = `<h1>${user.businessName}</h1><div><h4>Registro de inventario</h4></div>`;
                         productList.innerHTML += ` 
                             <div class="card my-4 mx-2" style="width: 18rem; border-radius: 15px; border: 0.5px solid lightskyblue;">
                                 <div class="card-body">
