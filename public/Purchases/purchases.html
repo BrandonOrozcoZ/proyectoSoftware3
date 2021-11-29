@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventario | Pocket Manager</title>
+  <title>Compras | Pocket Manager</title>
 
   <!-- BOOTSTRAP CDN-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
-  <link href="inventory.css" rel="stylesheet">
+  <link href="purchases.css" rel="stylesheet">
 
 </head>
 
@@ -37,28 +37,34 @@
     </div>
   </nav>
 
-  <!-- Create Product Modal -->
-  <div class="modal fade" id="productModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+  <!-- Create purchase Modal -->
+  <div class="modal fade" id="purchaseModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Añadir producto</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Añadir Compra</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="create-product-form">
+          <form id="create-purchase-form">
             <div class="form-group my-3">
-              <input type="text" id="create-name" class="form-control" placeholder="Nombre producto" required>
+              <input type="text" id="create-name" class="form-control" placeholder="Título Compra" required>
+            </div>
+            <div class="form-group my-3">
+              <input type="text" id="create-nameProvider" class="form-control" placeholder="Nombre del proveedor" required>
             </div>
             <div class="form-group my-3">
               <input type="text" id="create-desc" class="form-control" placeholder="Descripción" required>
             </div>
             <div class="form-group my-3">
+              <input type="text" id="create-purchase-product" class="form-control" placeholder="Producto" required>
+            </div>
+            <div class="form-group my-3">
               <input type="text" id="create-amount" class="form-control" placeholder="Cantidad" required>
             </div>
             <div class="form-group my-3">
-              <input type="text" id="create-price" class="form-control" placeholder="Precio" required>
+              <input type="text" id="create-price" class="form-control" placeholder="Precio total" required>
             </div>
             <div class="d-grid">
               <button type="submit" class="btn btn-outline-success btn-block" >Añadir</button>
@@ -77,18 +83,18 @@
       <div class="list-group user">
       </div>
       <div class="ms-auto">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#productModal" class="col card align-items-center btn-outline-success my-2"
+        <button type="button" data-bs-toggle="modal" data-bs-target="#purchaseModal" class="col card align-items-center btn-outline-info my-4"
         style="margin: 0.5%; border-radius: 20px;">
-        <img src="../images/anadirproducto.png" class="card-img-top" style="max-width: 70px; margin: 5%;">
-        <h6>Añadir producto</h6>
+        <img src="../images/anadircompra.png" class="card-img-top" style="max-width: 70px; margin: 5%;">
+        <h6>Añadir compra</h6>
         </button>
       </div>
-      <h5 class="">Tus productos</h5>
+      <h5 class="">Tus Compras</h5>
       <div class="container-fluid" style="border-radius: 10px; border: 0.5px solid gainsboro;"> 
-        <div class="row products">
+        <div class="row purchases">
         </div>
       </div>
-      <div id="contenedor" class="container-fluid my-4 productView" style="background: white; background-color: white; border-radius: 10px; border: 0.5px solid gainsboro;"> 
+      <div id="contenedor" class="container-fluid my-4 purchaseView" style="background: white; background-color: white; border-radius: 10px; border: 0.5px solid gainsboro;">
     
       </div>
   </div>
@@ -97,7 +103,7 @@
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <p class="col-md-4 mb-0 text-muted" style="margin-left: 1%;">Proyecto realizado como requisito para la asignatura de
-      ingeniería de software 3, Universidad del Quindío</p>
+      ingeniería de software 3, Universidad del Quindio</p>
 
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
@@ -142,7 +148,7 @@
   </script>
 
   <!-- CUSTOM CODE -->
-  <script src="inventoryapp.js"></script>
+  <script src="purchasesapp.js"></script>
 
 </body>
 </html>

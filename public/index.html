@@ -116,6 +116,9 @@
             <div class="form-group my-3">
               <input type="text" id="signup-business" class="form-control" placeholder="Nombre de tu negocio" required>
             </div>
+            <div class="form-group my-3">
+              <input type="text" id="signup-business" class="form-control" placeholder="Nombre de tu negocio" required>
+            </div>
             <div class="d-grid">
               <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
             </div>
@@ -159,7 +162,7 @@
         <h1 class="display-4 fw-normal">Pocket Manager</h1>
         <h2>Una nueva manera de gestionar tu <span class="typed"></span>.</h2>
         <a class="btn btn-outline-secondary" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">¡Ingresa aquí!</a>
-        <p class="lead fw-normal my-1">Or</p>
+        <p class="lead fw-normal my-1">Ó</p>
         <a class="btn btn-outline-secondary" href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">¡Únete gratis!</a>
 
       </div>
@@ -190,7 +193,6 @@
       <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
           <h2 class="display-5">Ten más control de tu negocio</h2>
-          <p class="lead">And an even wittier subheading.</p>
         </div>
         <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
         <img src="images/control.png" style="margin-top: -40%;">
@@ -231,7 +233,7 @@
         <img src="images/ventas.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
         <h5>Ventas</h5>
       </button>
-      <button type="button" class="col card align-items-center btn-outline-info"
+      <button type="button" onclick="window.open('Purchases/purchases.html', '_self')"class="col card align-items-center btn-outline-info"
         style="margin: 0.5%; border-radius: 40px;">
         <img src="images/compras.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
         <h5>Compras</h5>
@@ -243,12 +245,12 @@
         <img src="images/finanzas.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
         <h5>Finanzas</h5>
       </button>
-      <button type="button" class="col card align-items-center btn-outline-secondary"
+      <button type="button" onclick="window.open('Orders/orders.html', '_self')" class="col card align-items-center btn-outline-secondary"
         style="margin: 0.5%;border-radius: 40px;">
         <img src="images/envios.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
         <h5>Pedidos</h5>
       </button>
-      <button type="button" class="col card align-items-center btn-outline-danger"
+      <button type="button" onclick="window.open('Mydata/mydata.html', '_self')"class="col card align-items-center btn-outline-danger"
         style="margin: 0.5%; border-radius: 40px;">
         <img src="images/identificacion.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
         <h5>Mis datos</h5>
@@ -259,7 +261,7 @@
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <p class="col-md-4 mb-0 text-muted" style="margin-left: 1%;">Proyecto realizado como requisito para la asignatura de
-      ingenieria de software 3, Universidad del Quindío</p>
+      ingeniería de software 3, Universidad del Quindío</p>
 
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
