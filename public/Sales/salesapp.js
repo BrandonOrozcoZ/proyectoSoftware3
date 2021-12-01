@@ -95,32 +95,21 @@ const viewSale = async(id) => {
           <input type="text" class="form-control" id="saleName" placeholder="${sale2.data().clientName}">
           <label for="clientName" class="form-label">Producto:</label>
           <input type="text" class="form-control" id="saleName" placeholder="${sale2.data().product}">
-          <div id="contenedor2" style="background-color: white;">
-              <div id="col1" style="background-color: white; width: 48%;">
-                  <label for="precio" class="form-label">Precio:</label>
-                  <input type="number" class="form-control" id="precio" placeholder="${sale2.data().price}">
-              </div>
-              <div id="col2" style="background-color: white; width: 48%;">
-                  <label for="cantidad" class="form-label">Cantidad:</label>
-                  <input type="number" class="form-control" id="cantidad" placeholder="${sale2.data().amount}">
-              </div>
-          </div>
+          
+              
+            <label for="precio" class="form-label">Precio:</label>
+            <input type="number" class="form-control" id="precio" placeholder="${sale2.data().price}">
+              
+            <label for="cantidad" class="form-label">Cantidad:</label>
+            <input type="number" class="form-control" id="cantidad" placeholder="${sale2.data().amount}">
+              
+          
           <label for="description" class="form-label">Descipción:</label>
           <textarea class="form-control" id="description" rows="3"
               placeholder="${sale2.data().description}"></textarea>
           <div id="contenedor" style="background-color: white; margin-top: 2%; margin-left: 14%;">
           </div>
           </div>
-            <div id="sidebar" class="caja" style="background: white; background-color: white;">
-            <div style="background: white; background-color: white; margin: 0% 17%;">
-            <h4 style="text-align: center;">${sale2.data().title}</h4>
-            <h6 style="text-align: center;">${sale2.data().clientName}</h6>
-            <h10 style="text-align: center;">$${sale2.data().product}</h6>
-            <h10 style="text-align: center;">$${sale2.data().price}</h6>
-            <p style="text-align: center;">Disponibles: ${sale2.data().amount}</p>
-            <p style="text-align: center;">${sale2.data().description}</p>
-          </div>
-            </div>
             `
           ;
                 

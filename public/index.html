@@ -62,29 +62,6 @@
           <li class="nav-item logged-out" style="display: none;">
             <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">¡Únete gratis!</a>
           </li>
-          <!--
-          <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="Inventory/inventory.html" id="inventory">Inventario</a>
-          </li>
-          <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="orders">Ventas</a>
-          </li>
-          <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="sales">Compras</a>
-          </li>
-          <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="shopping">Finanzas</a>
-          </li>
-          <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="shopping">Pedidos</a>
-          </li>
-          <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="shopping">Mis datos</a>
-          </li>
-          -->
-          <li class="nav-item logged-in" style="display: none;">
-            <a class="nav-link" href="#" id="logout">Salir</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -240,20 +217,20 @@
       </button>
     </div>
     <div class="row">
-      <button type="button" class="col card align-items-center btn-outline-primary"
-        style="margin: 0.5%;border-radius: 40px;">
-        <img src="images/finanzas.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
-        <h5>Finanzas</h5>
-      </button>
       <button type="button" onclick="window.open('Orders/orders.html', '_self')" class="col card align-items-center btn-outline-secondary"
         style="margin: 0.5%;border-radius: 40px;">
         <img src="images/envios.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
         <h5>Pedidos</h5>
       </button>
-      <button type="button" onclick="window.open('Mydata/mydata.html', '_self')"class="col card align-items-center btn-outline-danger"
+      <button type="button" onclick="window.open('Mydata/mydata.html', '_self')"class="col card align-items-center btn-outline-primary"
         style="margin: 0.5%; border-radius: 40px;">
         <img src="images/identificacion.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
         <h5>Mis datos</h5>
+      </button>
+      <button type="button" id="logout" class="col card align-items-center btn-outline-danger"
+        style="margin: 0.5%; border-radius: 40px;">
+        <img src="images/iconSalir.png" class="card-img-top" style="max-width: 128px; margin: 5%;">
+        <h5>Salir</h5>
       </button>
     </div>
   </main>

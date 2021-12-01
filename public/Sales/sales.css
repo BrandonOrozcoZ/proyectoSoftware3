@@ -11,16 +11,7 @@
 	background: white;
   }
   #principal {
-	width: 60%;
+	width: 100%;
 	margin: 2%;
 	background: white;
   }
-  #sidebar {
-	width: 30%;
-	margin: 2%;
-	background-color: white;
-  }
-
-#venta{
-	height: 350px;
-}

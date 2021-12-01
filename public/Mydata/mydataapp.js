@@ -1,6 +1,5 @@
 const getUsers = () => db2.collection('users').get();
 const card = document.getElementById("info-card");
-const cardPer = document.getElementById("infoPer-card");
 const cardUser = document.getElementById("user-card");
 
 // User
@@ -20,12 +19,6 @@ const loginCheck = async (user) => {
                 card.innerHTML += `
                             <ul class="list-group list-group-flush"> 
                             <li class="list-group-item"><h7 style="font-weight: bold;"> Organización : </h7><h7>${user.businessName}</h7> </li>
-                            <li class="list-group-item"><h7 style="font-weight: bold;"> Descripción : </h7><h7>${user.description}</h7> </li>
-                            <li class="list-group-item"><h7 style="font-weight: bold;"> Mercado : </h7><h7>${user.market}</h7> </li>
-                            </ul>`;
-                        
-                cardPer.innerHTML += `
-                            <ul class="list-group list-group-flush">
                             <li class="list-group-item"><h7 style="font-weight: bold;"> Cedula : </h7><h7>${user.dni}</h7> </li>
                             <li class="list-group-item"><h7 style="font-weight: bold;"> Correo : </h7><h7>${user.email}</h7> </li>
                             </ul>`;
